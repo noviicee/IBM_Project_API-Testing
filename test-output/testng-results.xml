@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="10018" started-at="2022-03-21T07:24:15Z" finished-at="2022-03-21T07:24:25Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="10018" started-at="2022-03-21T07:24:15Z" finished-at="2022-03-21T07:24:25Z">
+      <class name="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing">
+        <test-method status="PASS" signature="createUser(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="createUser" duration-ms="5388" started-at="2022-03-21T07:24:15Z" finished-at="2022-03-21T07:24:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4e7dc304]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method status="PASS" signature="modifyUser(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="modifyUser" duration-ms="1520" started-at="2022-03-21T07:24:21Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.createUser" finished-at="2022-03-21T07:24:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4e7dc304]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyUser -->
+        <test-method status="PASS" signature="login(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="login" duration-ms="1432" started-at="2022-03-21T07:24:22Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.modifyUser" finished-at="2022-03-21T07:24:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4e7dc304]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="logout(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="logout" duration-ms="1632" started-at="2022-03-21T07:24:23Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.login" finished-at="2022-03-21T07:24:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4e7dc304]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="FAIL" signature="delete(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="delete" duration-ms="3" started-at="2022-03-21T07:24:25Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.logout" finished-at="2022-03-21T07:24:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4e7dc304]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.delete(API_Testing.java:82)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete -->
+      </class> <!-- IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
