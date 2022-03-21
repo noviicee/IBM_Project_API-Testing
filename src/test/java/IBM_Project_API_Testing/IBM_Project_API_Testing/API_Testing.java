@@ -11,7 +11,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import POJO.pojoClass;
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 
 public class API_Testing {
 
@@ -23,7 +22,6 @@ public class API_Testing {
 
 			pojoClass pojo = new pojoClass();
 
-			pojo.setId("0");
 			pojo.setUsername("robot");
 			pojo.setFirstName("mr");
 			pojo.setEmail("mr@robot.com");
@@ -33,21 +31,23 @@ public class API_Testing {
 
 			ObjectMapper objmapper = new ObjectMapper();
 
-			Response resp = given()
-							.contentType(ContentType.JSON)
-							.body(objmapper.writeValueAsString(pojo)).
-						when()
-							.post("/user").
-						then()
-							.statusCode(200)
-							.extract().response();
-
-			String username = resp.jsonPath().getString("username");
-			val.setAttribute("username", username);
-
-			String passwd = resp.jsonPath().getString("password");
-			val.setAttribute("pasword", passwd);
-
+			given()
+				.contentType(ContentType.JSON)
+				.body(objmapper.writeValueAsString(pojo)).
+			when()
+				.post("/user").
+			then()
+				.statusCode(200);
+				//.log().all();
+		
+		String username=pojo.getUsername();
+		val.setAttribute("username", username);
+		//System.out.println(username);
+		
+		String passwd=pojo.getPassword();
+		val.setAttribute("pasword", passwd);	
+		//System.out.println(passwd);
+		
 		} catch (Exception ex) {
 			System.out.println("The 'Create User' method failed.");
 			// System.out.println("The exception message was:"+ex);
@@ -75,28 +75,11 @@ public class API_Testing {
 			when()
 				.put("/user/" + val.getAttribute("username")).
 			then()
-				.statusCode(200).log().all();
+				.statusCode(200);
+				//.log().all();
 
 		} catch (Exception ex) {
 			System.out.println("The 'Modify User' method failed.");
-			// System.out.println("The exception message was:"+ex);
-		}
-	}
-
-	@Test(dependsOnMethods = "login")
-	public void logout(ITestContext val) {
-		try {
-			io.restassured.RestAssured.baseURI = "https://petstore.swagger.io/v2";
-
-			given()
-				.queryParam("username", val.getAttribute("username"))
-				.get("/user/login").
-			then()
-				.statusCode(200)
-				.log().all();
-			
-		} catch (Exception ex) {
-			System.out.println("The LOGIN method failed.");
 			// System.out.println("The exception message was:"+ex);
 		}
 	}
@@ -107,10 +90,28 @@ public class API_Testing {
 			io.restassured.RestAssured.baseURI = "https://petstore.swagger.io/v2";
 
 			given()
+				.queryParam("username", val.getAttribute("username"))
+				.get("/user/login").
+			then()
+				.statusCode(200);
+				//.log().all();
+			
+		} catch (Exception ex) {
+			System.out.println("The LOGIN method failed.");
+			// System.out.println("The exception message was:"+ex);
+		}
+	}
+
+	@Test(dependsOnMethods = "login")
+	public void logout(ITestContext val) {
+		try {
+			io.restassured.RestAssured.baseURI = "https://petstore.swagger.io/v2";
+
+			given()
 				.get("/user/logout").
 			then()
-				.statusCode(200)
-				.log().all();
+				.statusCode(200);
+				//.log().all();
 			
 		} catch (Exception ex) {
 			System.out.println("The LOGOUT method failed.");
@@ -129,8 +130,8 @@ public class API_Testing {
 			given()
 				.delete("/user/" + username).
 			then()
-				.statusCode(200)
-				.log().all();
+				.statusCode(200);
+				//.log().all();
 			
 		} catch (Exception ex) {
 			System.out.println("The DELETE method failed.");
