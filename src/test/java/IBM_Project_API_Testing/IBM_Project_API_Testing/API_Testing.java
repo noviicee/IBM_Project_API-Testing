@@ -133,7 +133,7 @@ public class API_Testing {
 				.statusCode(200);
 				//.log().all();
 			
-		} catch (Exception ex) {
+		} catch (AssertionError ex) {
 			System.out.println("The DELETE method failed.");
 			// System.out.println("The exception message was:"+ex);
 		}

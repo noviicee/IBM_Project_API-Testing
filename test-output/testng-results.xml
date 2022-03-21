@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9101" started-at="2022-03-21T11:12:31Z" finished-at="2022-03-21T11:12:40Z">
+  <suite name="Default suite" duration-ms="9410" started-at="2022-03-21T11:36:18Z" finished-at="2022-03-21T11:36:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9101" started-at="2022-03-21T11:12:31Z" finished-at="2022-03-21T11:12:40Z">
+    <test name="Default test" duration-ms="9410" started-at="2022-03-21T11:36:18Z" finished-at="2022-03-21T11:36:28Z">
       <class name="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing">
-        <test-method status="PASS" signature="createUser(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="createUser" duration-ms="3212" started-at="2022-03-21T11:12:31Z" finished-at="2022-03-21T11:12:34Z">
+        <test-method status="PASS" signature="createUser(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="createUser" duration-ms="3426" started-at="2022-03-21T11:36:18Z" finished-at="2022-03-21T11:36:22Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUser -->
-        <test-method status="PASS" signature="modifyUser(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="modifyUser" duration-ms="1473" started-at="2022-03-21T11:12:34Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.createUser" finished-at="2022-03-21T11:12:35Z">
+        <test-method status="PASS" signature="modifyUser(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="modifyUser" duration-ms="1458" started-at="2022-03-21T11:36:22Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.createUser" finished-at="2022-03-21T11:36:23Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- modifyUser -->
-        <test-method status="PASS" signature="login(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="login" duration-ms="1435" started-at="2022-03-21T11:12:35Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.modifyUser" finished-at="2022-03-21T11:12:37Z">
+        <test-method status="PASS" signature="login(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="login" duration-ms="1471" started-at="2022-03-21T11:36:23Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.modifyUser" finished-at="2022-03-21T11:36:25Z">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="logout(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="logout" duration-ms="1488" started-at="2022-03-21T11:12:37Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.login" finished-at="2022-03-21T11:12:38Z">
+        <test-method status="PASS" signature="logout(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="logout" duration-ms="1513" started-at="2022-03-21T11:36:25Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.login" finished-at="2022-03-21T11:36:26Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="FAIL" signature="delete(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="delete" duration-ms="1453" started-at="2022-03-21T11:12:38Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.logout" finished-at="2022-03-21T11:12:40Z">
+        <test-method status="PASS" signature="delete(org.testng.ITestContext)[pri:0, instance:IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing@5700d6b1]" name="delete" duration-ms="1507" started-at="2022-03-21T11:36:26Z" depends-on-methods="IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.logout" finished-at="2022-03-21T11:36:28Z">
           <params>
             <param index="0">
               <value>
@@ -59,81 +59,6 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[1 expectation failed.
-Expected status code <200> but was <404>.
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <200> but was <404>.
-
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
-at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
-at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
-at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
-at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
-at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
-at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-at IBM_Project_API_Testing.IBM_Project_API_Testing.API_Testing.delete(API_Testing.java:133)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
